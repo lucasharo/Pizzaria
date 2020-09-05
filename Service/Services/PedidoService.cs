@@ -22,60 +22,70 @@ namespace Service.Services
 
         public string CadastrarPedido(PedidoDTO pedidoDTO)
         {
-            ValidarPedido(pedidoDTO);
-
-            if (pedidoDTO.IdUsuario.HasValue && pedidoDTO.IdUsuario.Value > 0)
+            try
             {
-                var usuario = _unitOfWork.UsuarioRepository.GetUsuarioById(pedidoDTO.IdUsuario.Value);
+                ValidarPedido(pedidoDTO);
 
-                pedidoDTO.IdUsuario = usuario.Id;
-                pedidoDTO.Nome = usuario.Nome + " " + usuario.Sobrenome;
-
-                pedidoDTO.Endereco = _unitOfWork.UsuarioRepository.GetEnderecoUsuarioById(pedidoDTO.IdUsuario.Value);
-            }
-
-            CalcularValores(pedidoDTO);
-
-            var pedido = new Pedido
-            {
-                IdUsuario = pedidoDTO.IdUsuario,
-                Nome = pedidoDTO.Nome,
-                Valor = pedidoDTO.Valor,
-                CEP = pedidoDTO.Endereco.CEP,
-                Logradouro = pedidoDTO.Endereco.Logradouro,
-                Numero = pedidoDTO.Endereco.Numero,
-                Complemento = pedidoDTO.Endereco.Complemento,
-                Bairro = pedidoDTO.Endereco.Bairro,
-                Cidade = pedidoDTO.Endereco.Cidade
-            };
-
-            _unitOfWork.PedidoRepository.InserirPedido(pedido);
-
-            foreach (var pizzaDTO in pedidoDTO.Pizzas)
-            {
-                var pizza = new Pizza
+                if (pedidoDTO.IdUsuario.HasValue && pedidoDTO.IdUsuario.Value > 0)
                 {
-                    IdPedido = pedido.Id,
-                    Valor = pizzaDTO.Valor
+                    var usuario = _unitOfWork.UsuarioRepository.GetUsuarioById(pedidoDTO.IdUsuario.Value);
+
+                    pedidoDTO.IdUsuario = usuario.Id;
+                    pedidoDTO.Nome = usuario.Nome + " " + usuario.Sobrenome;
+
+                    pedidoDTO.Endereco = _unitOfWork.UsuarioRepository.GetEnderecoUsuarioById(pedidoDTO.IdUsuario.Value);
+                }
+
+                CalcularValores(pedidoDTO);
+
+                var pedido = new Pedido
+                {
+                    IdUsuario = pedidoDTO.IdUsuario,
+                    Nome = pedidoDTO.Nome,
+                    Valor = pedidoDTO.Valor,
+                    CEP = pedidoDTO.Endereco.CEP,
+                    Logradouro = pedidoDTO.Endereco.Logradouro,
+                    Numero = pedidoDTO.Endereco.Numero,
+                    Complemento = pedidoDTO.Endereco.Complemento,
+                    Bairro = pedidoDTO.Endereco.Bairro,
+                    Cidade = pedidoDTO.Endereco.Cidade
                 };
 
-                _unitOfWork.PedidoRepository.InserirPizza(pizza);
+                _unitOfWork.PedidoRepository.InserirPedido(pedido);
 
-                foreach (var sabor in pizzaDTO.Sabores)
+                foreach (var pizzaDTO in pedidoDTO.Pizzas)
                 {
-                    var pizzaSabor = new Pizza_Sabor
+                    var pizza = new Pizza
                     {
-                        IdPizza = pizza.Id,
-                        IdSabor = sabor.Id
+                        IdPedido = pedido.Id,
+                        Valor = pizzaDTO.Valor
                     };
 
-                    _unitOfWork.PedidoRepository.InserirPizzaSabor(pizzaSabor);
+                    _unitOfWork.PedidoRepository.InserirPizza(pizza);
+
+                    foreach (var sabor in pizzaDTO.Sabores)
+                    {
+                        var pizzaSabor = new Pizza_Sabor
+                        {
+                            IdPizza = pizza.Id,
+                            IdSabor = sabor.Id
+                        };
+
+                        _unitOfWork.PedidoRepository.InserirPizzaSabor(pizzaSabor);
+                    }
                 }
+
+                _unitOfWork.Commit();
+
+                return "Pedido realizado com sucesso!";
+            } catch (AppException ex)
+            {
+                throw ex;
             }
-
-            _unitOfWork.Commit();
-
-            return "Pedido realizado com sucesso!";
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao cadastrar pedido", ex);
+            }
         }
 
         private void CalcularValores(PedidoDTO pedidoDTO)

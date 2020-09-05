@@ -19,7 +19,7 @@ namespace API.Controllers
         }
         
         [NonAction]
-        private ObjectResult CreateErrorResponse<T>(string message)
+        private ObjectResult CreateErrorResponse<T>(string message = "")
         {
             return Ok(
                 new BaseResponse<T>
@@ -42,17 +42,6 @@ namespace API.Controllers
         }
 
         [NonAction]
-        private ObjectResult CreateNotFoundResponse<T>(string message = "")
-        {
-            return Ok(
-                new BaseResponse<T>
-                {
-                    StatusCode = (int)HttpStatusCode.NotFound,
-                    MessageError = message
-                });
-        }
-
-        [NonAction]
         public ActionResult Execute<T>(Func<T> action)
         {
             try
@@ -61,11 +50,13 @@ namespace API.Controllers
             }
             catch (AppException ex)
             {
-                return CreateNotFoundResponse<T>(ex.Message);
+                _logger.LogWarning(ex.Message);
+
+                return CreateErrorResponse<T>(ex.Message);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message);
+                _logger.LogError(ex, ex.Message);
 
                 return CreateErrorResponse<T>(ex.Message);
             }            

@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{AC58789B-439A-43B5-9FE2-DB6E4B965843}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{AC58789B-439A-43B5-9FE2-DB6E4B965843}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{2A0CD15D-1BD9-489E-93B3-04C73C5A21E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{2A0CD15D-1BD9-489E-93B3-04C73C5A21E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{41372FE1-8131-44BE-8BB5-2DA4578F9917}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra\Infra.csproj", "{41372FE1-8131-44BE-8BB5-2DA4578F9917}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{565F6F18-F3F3-4E77-B4BF-F4AA96A677FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{565F6F18-F3F3-4E77-B4BF-F4AA96A677FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTest", "XUnitTest\XUnitTest.csproj", "{C658D644-399E-4F09-ABAC-4C77A93BE899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTest", "XUnitTest\XUnitTest.csproj", "{C658D644-399E-4F09-ABAC-4C77A93BE899}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting", "CrossCutting\CrossCutting.csproj", "{30BBF3A6-B56B-4333-A5FB-D7F7EB7E9430}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{C658D644-399E-4F09-ABAC-4C77A93BE899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C658D644-399E-4F09-ABAC-4C77A93BE899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C658D644-399E-4F09-ABAC-4C77A93BE899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BBF3A6-B56B-4333-A5FB-D7F7EB7E9430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BBF3A6-B56B-4333-A5FB-D7F7EB7E9430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BBF3A6-B56B-4333-A5FB-D7F7EB7E9430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BBF3A6-B56B-4333-A5FB-D7F7EB7E9430}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging;
 using Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Domain.DTO;
-using System.Collections.Generic;
 
 namespace API.Controllers
 {

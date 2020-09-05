@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\Pizzaria\\Domain\\Domain.csproj": {}
+    "D:\\Workspace\\Pizzaria\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\Pizzaria\\Domain\\Domain.csproj": {
+    "D:\\Workspace\\Pizzaria\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\Pizzaria\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Workspace\\Pizzaria\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Workspace\\Pizzaria\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\k2.lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\Pizzaria\\Domain\\obj\\",
+        "projectPath": "D:\\Workspace\\Pizzaria\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "D:\\Workspace\\Pizzaria\\Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\k2.lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/nuget": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -45,6 +41,14 @@
             "Dapper.Contrib": {
               "target": "Package",
               "version": "[2.0.35, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.7.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             }
           },
           "imports": [
