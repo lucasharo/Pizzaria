@@ -180,19 +180,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dell\\.nuget\\packages\\": {}
+    "C:\\Users\\k2.lucas\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\Pizzaria\\CrossCutting\\CrossCutting.csproj",
+      "projectUniqueName": "C:\\Workspace\\Pizzaria2\\CrossCutting\\CrossCutting.csproj",
       "projectName": "CrossCutting",
-      "projectPath": "D:\\Workspace\\Pizzaria\\CrossCutting\\CrossCutting.csproj",
-      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\Pizzaria\\CrossCutting\\obj\\",
+      "projectPath": "C:\\Workspace\\Pizzaria2\\CrossCutting\\CrossCutting.csproj",
+      "packagesPath": "C:\\Users\\k2.lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\Workspace\\Pizzaria2\\CrossCutting\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\k2.lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -200,7 +204,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/nuget": {}
       },
       "frameworks": {
         "netstandard2.0": {

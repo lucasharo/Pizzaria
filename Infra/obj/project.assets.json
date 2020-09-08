@@ -930,19 +930,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dell\\.nuget\\packages\\": {}
+    "C:\\Users\\k2.lucas\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\Pizzaria\\Infra\\Infra.csproj",
+      "projectUniqueName": "C:\\Workspace\\Pizzaria2\\Infra\\Infra.csproj",
       "projectName": "Infra",
-      "projectPath": "D:\\Workspace\\Pizzaria\\Infra\\Infra.csproj",
-      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\Pizzaria\\Infra\\obj\\",
+      "projectPath": "C:\\Workspace\\Pizzaria2\\Infra\\Infra.csproj",
+      "packagesPath": "C:\\Users\\k2.lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\Workspace\\Pizzaria2\\Infra\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\k2.lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -950,16 +954,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/nuget": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Workspace\\Pizzaria\\CrossCutting\\CrossCutting.csproj": {
-              "projectPath": "D:\\Workspace\\Pizzaria\\CrossCutting\\CrossCutting.csproj"
+            "C:\\Workspace\\Pizzaria2\\CrossCutting\\CrossCutting.csproj": {
+              "projectPath": "C:\\Workspace\\Pizzaria2\\CrossCutting\\CrossCutting.csproj"
             },
-            "D:\\Workspace\\Pizzaria\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Workspace\\Pizzaria\\Domain\\Domain.csproj"
+            "C:\\Workspace\\Pizzaria2\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Workspace\\Pizzaria2\\Domain\\Domain.csproj"
             }
           }
         }
